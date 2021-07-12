@@ -221,7 +221,6 @@ public class ThreadVeiculo extends Thread {
         if (a == true || b == true || c == true || d == true) {
             x = false;
         }
-        System.out.println(" cruzamento vazio?" + x);
         return x;
     }
 
@@ -269,7 +268,6 @@ public class ThreadVeiculo extends Thread {
                 tipo = 4;
                 break;
         }
-        System.out.println("tipo do cruzamento" + tipo);
         return tipo;
     }
 
