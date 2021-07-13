@@ -271,7 +271,7 @@ public class ThreadVeiculo extends Thread {
         return tipo;
     }
 
-    private void executaCruzamento(int sortdirecao, int tipocruzamento) throws InterruptedException {
+    private synchronized void executaCruzamento(int sortdirecao, int tipocruzamento) throws InterruptedException {
         int instrucao = MalhaViaria.getInstance().getEstradas()[lAtual][cAtual].getInstrucao();
 
         switch (tipocruzamento) {
