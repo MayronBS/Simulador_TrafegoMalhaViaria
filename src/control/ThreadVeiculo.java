@@ -37,10 +37,7 @@ public class ThreadVeiculo extends Thread {
                 if (isCruzamento() == false) {
                     if (proxOcupado() == false) {
                         try {
-                            move();
-                        } catch (InterruptedException ex) {
-                            Logger.getLogger(ThreadVeiculo.class.getName()).log(Level.SEVERE, null, ex);
-                        }
+                            move();} catch (InterruptedException ex) {Logger.getLogger(ThreadVeiculo.class.getName()).log(Level.SEVERE, null, ex);}
                     }
                 } else {
                     if (cruzamentoVazio() == true) {
@@ -50,31 +47,19 @@ public class ThreadVeiculo extends Thread {
                         if (tipocruzamento == 1) {
                             sortdirecao = r.nextInt(3) + 1;
                             try {
-                                executaCruzamento(sortdirecao, tipocruzamento);
-                            } catch (InterruptedException ex) {
-                                Logger.getLogger(ThreadVeiculo.class.getName()).log(Level.SEVERE, null, ex);
-                            }
+                                executaCruzamento(sortdirecao, tipocruzamento);} catch (InterruptedException ex) {Logger.getLogger(ThreadVeiculo.class.getName()).log(Level.SEVERE, null, ex);}
                         } else {
                             sortdirecao = r.nextInt(2) + 1;
                             try {
-                                executaCruzamento(sortdirecao, tipocruzamento);
-                            } catch (InterruptedException ex) {
-                                Logger.getLogger(ThreadVeiculo.class.getName()).log(Level.SEVERE, null, ex);
-                            }
+                                executaCruzamento(sortdirecao, tipocruzamento);} catch (InterruptedException ex) {Logger.getLogger(ThreadVeiculo.class.getName()).log(Level.SEVERE, null, ex);}
                         }
                     } else {
                         try {
-                            this.sleep(300);
-                        } catch (InterruptedException ex) {
-                            Logger.getLogger(ThreadVeiculo.class.getName()).log(Level.SEVERE, null, ex);
-                        }
+                            this.sleep(300);} catch (InterruptedException ex) {  Logger.getLogger(ThreadVeiculo.class.getName()).log(Level.SEVERE, null, ex);}
                     }
                 }
                 try {
-                    this.sleep(velocidade);
-                } catch (InterruptedException ex) {
-                    Logger.getLogger(ThreadVeiculo.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                    this.sleep(velocidade);} catch (InterruptedException ex) {Logger.getLogger(ThreadVeiculo.class.getName()).log(Level.SEVERE, null, ex);}
             } else {
                 executa = false;
             }

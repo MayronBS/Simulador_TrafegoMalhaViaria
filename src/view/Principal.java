@@ -21,7 +21,7 @@ import model.MalhaViaria;
 public class Principal extends javax.swing.JFrame {
 
     
-    private int VMIN = 400;
+    private int VMIN = 200;
     private ThreadVeiculo t;
     private Random random = new Random();
     private int[][] starts1 = {{5,0},{0,7},{4,15},{9,8}};
