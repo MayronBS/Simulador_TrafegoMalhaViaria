@@ -122,7 +122,7 @@ public class ThreadVeiculo extends Thread {
         return b;
     }
 
-    public synchronized boolean proxOcupado() {
+    public boolean proxOcupado() {
         boolean b = false;
         switch (MalhaViaria.getInstance().getEstradas()[lAtual][cAtual].getInstrucao()) {
             case 1:
