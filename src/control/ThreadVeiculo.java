@@ -27,7 +27,7 @@ public class ThreadVeiculo extends Thread {
         this.velocidade = velocidade;
         this.executa = true;
         this.start();
-        
+
     }
 
     @Override
@@ -62,7 +62,7 @@ public class ThreadVeiculo extends Thread {
                                 Logger.getLogger(ThreadVeiculo.class.getName()).log(Level.SEVERE, null, ex);
                             }
                         }
-                    }else{
+                    } else {
                         try {
                             this.sleep(300);
                         } catch (InterruptedException ex) {
@@ -95,7 +95,7 @@ public class ThreadVeiculo extends Thread {
 
     }
 
-    public synchronized boolean isCruzamento() {
+    public boolean isCruzamento() {
         boolean b = false;
         switch (MalhaViaria.getInstance().getEstradas()[lAtual][cAtual].getInstrucao()) {
             case 1:
@@ -122,7 +122,7 @@ public class ThreadVeiculo extends Thread {
         return b;
     }
 
-    public boolean proxOcupado() {
+    public synchronized boolean proxOcupado() {
         boolean b = false;
         switch (MalhaViaria.getInstance().getEstradas()[lAtual][cAtual].getInstrucao()) {
             case 1:
@@ -382,8 +382,8 @@ public class ThreadVeiculo extends Thread {
                     case 2:
                         moverCima();
                         moverCima();
-                        moverDireita();
-                        moverDireita();
+                        moverEsquerda();
+                        moverEsquerda();
                         break;
                 }
                 break;
