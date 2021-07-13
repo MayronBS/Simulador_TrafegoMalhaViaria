@@ -26,7 +26,7 @@ public class Principal extends javax.swing.JFrame {
     private Random random = new Random();
     private int[][] starts1 = {{5,0},{0,7},{4,15},{9,8}};
     private int[][] starts2 = {{6,0},{13,0},{19,0},{0,7},{0,16},{5,24},{9,24},{12,24},{18,24},{24,8},{24,17}};
-    private int[][] starts3 = {{7,0},{19,0},{0,7},{6,24},{0,18}};
+    private int[][] starts3 = {{7,0},{19,0},{0,7},{6,24},{0,18}, {24,8}};
     private String opcao;
     private int sort;
     private int velocidade;
